@@ -133,11 +133,15 @@ body.no-scroll {
   left: 0px;
   background: linear-gradient(180deg, #ff3358, #ff4fd8);
   mix-blend-mode: normal;
-  opacity: var(--opacity);
   filter: blur(150px);
   height: 150px;
   width: 150px;
   border-radius: 50%;
+}
+@-moz-document url-prefix() {
+  .controllable-gradient {
+    opacity: 0.35;
+  }
 }
 @media screen and (max-width: 768px) {
   .controllable-gradient {

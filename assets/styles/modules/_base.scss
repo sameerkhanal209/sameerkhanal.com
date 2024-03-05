@@ -102,11 +102,17 @@ body{
     background: linear-gradient(180deg, #ff3358, #ff4fd8);
   
     mix-blend-mode: normal;
-    opacity: var(--opacity);
+    //opacity: var(--opacity);
     filter: blur(150px);
   
     height: 150px;
     width: 150px;
+
+    @-moz-document url-prefix() {
+        
+        opacity: .35;
+        
+    }
   
     //transform: translate3d(-50%, -50%, 0);
   
