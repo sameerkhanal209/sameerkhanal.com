@@ -1,0 +1,58 @@
+.badge{
+    padding: 10px;
+    border:1px solid transparent;
+    font-size: .9rem;
+    border-radius: 20px;
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    .icon{
+        position: relative;
+        margin-right: 8px;
+
+        width: 0.6rem;
+        height: 0.6rem;
+        
+        &::after{
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: .6rem;
+            height: .6rem;
+            border-radius: 50%;
+
+            animation: heartbeat 1s infinite;
+            transform-origin: center;
+        }
+    }
+
+    &.badge-green{
+        background-color: var(--color-green);
+        color: var(--color-dark-green);
+
+        .icon{
+            &::before{
+                background-color: #20786f;
+            }
+
+            &::after{
+                background-color: var(--color-dark-green);
+            }
+        }
+    }
+}
+
+@keyframes heartbeat {
+    0% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.2);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }

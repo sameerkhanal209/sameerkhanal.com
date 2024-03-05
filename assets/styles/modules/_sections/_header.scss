@@ -1,0 +1,133 @@
+.navbar{
+    
+    background-color: var(--color-bg);
+    padding: 10px 10px;
+
+    @media screen and (max-width: $md-screen){
+        border-bottom: 1px solid var(--grid-color);
+    }
+
+    .navbar-inner{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        .main-nav{
+            display: flex;
+            align-items: center;
+            
+            .menu{
+                margin-left: 20px;
+            }
+        }
+
+        .logo{
+            a{
+                color: var(--color-primary);
+                font-size: 2rem;
+                font-weight: 700;
+                text-decoration: none;
+            }
+        }
+
+        .menu{
+
+            @media screen and (max-width: $md-screen){
+
+                display: none;
+                
+                position: absolute;
+                background-color: var(--color-bg);
+
+                
+                top: 80px;
+                left: 0;
+                right: 0;
+
+                margin:0;
+                padding:0;
+
+                bottom: 0;
+                margin-left: 0 !important;
+
+                &.active{
+                    display: block;
+                    z-index: 999;
+                }
+
+                ul{
+
+                    flex-direction: column;
+
+                    li{
+                        padding: 20px 0;
+                        text-align: center;
+                        display: block;
+
+                        a{
+                            font-size: 1.3rem;
+                            display: block;
+                        }
+                    }
+                }
+            }
+
+            ul{
+                display: flex;
+                align-items: center;
+
+                a{
+                    color: var(--color-font-secondary);
+                    text-decoration: none;
+                    padding: 1rem;
+                    transition: color 0.3s ease;
+                    font-size: var(--header-font-size);
+
+                    &:hover{
+                        color: var(--color-primary);
+                    }
+
+                    &.with-icon{
+                        display: flex;
+
+                        svg{
+                            margin-left: 5px;
+                            height: 13px;
+                            width: 13px;
+                        }
+                    }
+                }
+            }
+            
+        }
+
+        .hamburger{
+
+            @media screen and (min-width: $md-screen){
+                display: none !important;
+            }
+
+            svg{
+                height: 22px;
+                width: 22px;
+            }
+        }
+
+        .extra{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            .cta{
+                @media screen and (max-width: $md-screen){
+                    display: none;
+                }
+            }
+        }
+
+        .cta{
+            font-size: var(--header-font-size);
+        }
+
+    }
+}

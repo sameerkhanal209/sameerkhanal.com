@@ -1,0 +1,46 @@
+
+@mixin graident-text{
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: #d8e0fca6;
+}
+
+@mixin gradient-bg{
+    background-size: 100% 100%, 100% 100%, 1440px 1px;
+    background-position: bottom;
+    background-repeat: no-repeat;
+}
+
+/* Text Gradients */
+
+@mixin highlight-1 {
+    background: linear-gradient(307deg, #d4b7e8, #d1b7ef 50.57%, #ff849a);
+    @include graident-text;
+}
+
+/* Background Gradients */
+@mixin gradient-background-1 {
+    @include gradient-bg;
+    background: linear-gradient(to top, black 0, hsla(0, 0%, 100%, 0) 100%), linear-gradient(90deg, #eb367f33 0, #7928ca33 100%);
+    
+}
+
+@mixin gradient-background-2 {
+    @include gradient-bg;
+    background: linear-gradient(307deg, #d4b7e8, #d1b7ef 50.57%, #ff849a);
+    
+}
+
+.highlight-1{
+    @include highlight-1;
+}
+
+
+.gradient-background-1{
+    @include gradient-background-1;
+}
+
+.gradient-background-2{
+    @include gradient-background-2;
+}

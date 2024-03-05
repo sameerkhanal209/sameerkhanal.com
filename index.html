@@ -1,0 +1,577 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sameer Khanal</title>
+
+    <link rel="stylesheet" href="assets/styles/style.css" />
+    <link rel="icon" type="image/png" href="./assets/images/favicon.png">
+  </head>
+  <body>
+
+    <svg width="0" height="0" style="display: none;">
+
+        <symbol xmlns="http://www.w3.org/2000/svg" id="arrow-external-link" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M17 7l-10 10" /><path d="M8 7l9 0l0 9" /></symbol>
+        <symbol xmlns="http://www.w3.org/2000/svg" id="lock-icon" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M5 13a2 2 0 0 1 2 -2h10a2 2 0 0 1 2 2v6a2 2 0 0 1 -2 2h-10a2 2 0 0 1 -2 -2v-6z" /><path d="M11 16a1 1 0 1 0 2 0a1 1 0 0 0 -2 0" /><path d="M8 11v-4a4 4 0 1 1 8 0v4" /></symbol>
+        <symbol xmlns="http://www.w3.org/2000/svg" id="linkedin" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M4 4m0 2a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v12a2 2 0 0 1 -2 2h-12a2 2 0 0 1 -2 -2z" /><path d="M8 11l0 5" /><path d="M8 8l0 .01" /><path d="M12 16l0 -5" /><path d="M16 16v-3a2 2 0 0 0 -4 0" /></symbol>
+        <symbol xmlns="http://www.w3.org/2000/svg" id="brand-x" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M4 4l11.733 16h4.267l-11.733 -16z" /><path d="M4 20l6.768 -6.768m2.46 -2.46l6.772 -6.772" /></symbol>
+        <symbol xmlns="http://www.w3.org/2000/svg" id="github" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M9 19c-4.3 1.4 -4.3 -2.5 -6 -3m12 5v-3.5c0 -1 .1 -1.4 -.5 -2c2.8 -.3 5.5 -1.4 5.5 -6a4.6 4.6 0 0 0 -1.3 -3.2a4.2 4.2 0 0 0 -.1 -3.2s-1.1 -.3 -3.5 1.3a12.3 12.3 0 0 0 -6.2 0c-2.4 -1.6 -3.5 -1.3 -3.5 -1.3a4.2 4.2 0 0 0 -.1 3.2a4.6 4.6 0 0 0 -1.3 3.2c0 4.6 2.7 5.7 5.5 6c-.6 .6 -.6 1.2 -.5 2v3.5" /></symbol>
+        <symbol xmlns="http://www.w3.org/2000/svg" id="arrow-right" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M5 12l14 0" /><path d="M13 18l6 -6" /><path d="M13 6l6 6" /></symbol>
+        <symbol xmlns="http://www.w3.org/2000/svg" id="hamburger" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M4 8l16 0" /><path d="M4 16l16 0" /></symbol>
+        <symbol xmlns="http://www.w3.org/2000/svg" id="instagram" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M4 4m0 4a4 4 0 0 1 4 -4h8a4 4 0 0 1 4 4v8a4 4 0 0 1 -4 4h-8a4 4 0 0 1 -4 -4z" /><path d="M12 12m-3 0a3 3 0 1 0 6 0a3 3 0 1 0 -6 0" /><path d="M16.5 7.5l0 .01" /></symbol>
+    
+    </svg>
+
+
+    <div class="controllable-gradient"></div>
+
+    <div class="main">
+
+      <header>
+        <div class="navbar">
+          <div class="container">
+            <div class="navbar-inner">
+              <div class="main-nav">
+                <div class="logo">
+                  <a href="#" class="logo-link my-title highlight-1"> SK </a>
+                </div>
+
+                <nav class="menu">
+                  <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a target="_blank" class="with-icon" href="https://rudrax.net">Blog <svg class="icon"><use xlink:href="#arrow-external-link"></use></svg></a></li>
+                  </ul>
+                </nav>
+              </div>
+
+              <div class="extra">
+                <button class="btn hamburger"><svg class="icon"><use xlink:href="#hamburger"></use></svg></button>
+                <a href="#contact" class="cta btn btn-primary">Contact Me</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <main>
+        
+
+        <section class="section hero" id="home">
+          <div class="grid-container">
+            <div class=" content">
+              <p class="available-badge badge badge-green"><span class="icon"></span> <span>I'm available 👋</span></p>
+                
+              <h1 class="title">Hello, I'm <span class="name">Sameer Khanal</span>.</h1>
+              <p class="introduction">
+                I'm a <span class="my-title highlight-1">Full Stack Web Developer</span>. I specialize in crafting stunning websites that look great and function seamlessly.
+              </p>
+
+              <div class="cta-holder">
+                <a class="cool-cta with-icon" href="#contact"
+                  ><span>Let's work together <svg class="icon"><use xlink:href="#arrow-right"></use></svg></span></a>
+              </div> 
+
+            </div>
+
+          </div>
+
+        </section>
+
+        <section class="projects_slider" id="projects_slider">
+
+            <div class="projects-holder">
+                <div class="project">
+                    <img src="./assets/images/capitol-showcase.webp" alt="Capitol Scientific Design">
+                </div>
+                <div class="project">
+                    <a title="Click to Read more about aeonfree (scrolls down)" href="#aeonfree"><img src="./assets/images/aeonfree-showcase.webp" alt="Aeonfree Design"></a>
+                </div>
+                <div class="project">
+                    <a target="_blank" title="Click to Visit Free-Hosting.org (opens in a new tab)" href="https://free-hosting.org"><img src="./assets/images/free-hosting-showcase.webp" alt="Free Hosting Design"></a>
+                </div>
+                <div class="project">
+                    <a title="Click to Read more about Remote Work Landing Page  (scrolls down)" href="#remote-work"><img src="./assets/images/remote-work-showcase.webp" alt="Remote Work Design"></a>
+                </div>
+                <div class="project">
+                    <a title="Click to Read more about Trade99 Landing Page (scrolls down)" href="#trade99"><img src="./assets/images/trade99-showcase.webp" alt="Trade99 Design"></a>
+                </div>
+                <div class="project">
+                    <a title="Click to Read more about AnimeLikeList (scrolls down)" href="#animelikelist"><img src="./assets/images/animelikelist-showcase.webp" alt="Anime Like List Design"></a>
+                </div>
+            </div>
+
+            <div class="projects-holder">
+                <div class="project">
+                    <img src="./assets/images/capitol-showcase.webp" alt="Capitol Scientific Design">
+                </div>
+                <div class="project">
+                    <a title="Click to Read more about aeonfree (scrolls down)" href="#aeonfree"><img src="./assets/images/aeonfree-showcase.webp" alt="Aeonfree Design"></a>
+                </div>
+                <div class="project">
+                    <a target="_blank" title="Click to Visit Free-Hosting.org (opens in a new tab)" href="https://free-hosting.org"><img src="./assets/images/free-hosting-showcase.webp" alt="Free Hosting Design"></a>
+                </div>
+                <div class="project">
+                    <a title="Click to Read more about Remote Work Landing Page  (scrolls down)" href="#remote-work"><img src="./assets/images/remote-work-showcase.webp" alt="Remote Work Design"></a>
+                </div>
+                <div class="project">
+                    <a title="Click to Read more about Trade99 Landing Page (scrolls down)" href="#trade99"><img src="./assets/images/trade99-showcase.webp" alt="Trade99 Design"></a>
+                </div>
+                <div class="project">
+                    <a title="Click to Read more about AnimeLikeList (scrolls down)" href="#animelikelist"><img src="./assets/images/animelikelist-showcase.webp" alt="Anime Like List Design"></a>
+                </div>
+            </div>
+
+        </section>
+
+        <section class="section about" id="about">
+            <div class="grid-container">
+                <div class="content two-row">
+                    <div class="content-header">
+                        <h2 class="title">About Me</h2>
+                    </div>
+                    <div class="content-background">
+                        <div class="background-section">
+                            <div class="background-section-intro"><h3>Introduction</h3></div>
+                            <p>I am a Full Stack Web Developer with a passion for crafting <span class="highlight-color-one">beautiful</span> and <span class="highlight-color-two">functional</span> websites. I have a strong foundation in web development and have a keen eye for design. I am always looking for new challenges and opportunities to grow and expand my skillset.</p>
+                        </div>
+
+                        <div class="background-section">
+                            <div class="background-section-intro"><h3>Experience</h3></div>
+                            <div class="experience">
+
+                                <ul>
+                                   <li>I am the developer of 
+                                        <a target="_blank" href="https://aeonfree.com"><span>Aeonfree</span> <svg class="icon"><use xlink:href="#arrow-external-link"></use></svg> </a>,
+                                        <a target="_blank" href="https://recommendanime.com"><span>RecommendAnime</span> <svg class="icon"><use xlink:href="#arrow-external-link"></use></svg></a>,
+                                        <a target="_blank" href="https://free-hosting.org"><span>Free-Hosting.org</span> <svg class="icon"><use xlink:href="#arrow-external-link"></use></svg></a>
+                                    </li>
+
+                                    <li>I started my development journey from <span class="highlight-color-one">2014</span>.</li>
+
+                                    <li>I have been working as a freelancer on <a class="highlight-color-two" target="_blank" rel="nofollow" href="https://www.upwork.com/freelancers/~0134cd8d1d5c72ec75"><span>Upwork</span> <svg class="icon"><use xlink:href="#arrow-external-link"></use></svg></a></li>
+
+                                </ul>
+
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section skills" id="skills">
+            <div class="grid-container">
+                <div class="content six-row-with-heading">
+                    <div class="content-item content-header">
+                        <h2 class="title">I work with</h2>
+                    </div>
+                    
+                    <div class="light-content content-item">
+                        <span>HTML5</span>
+                    </div>
+
+                    <div class="light-content content-item">
+                        <span>CSS3</span>
+                    </div>
+
+                    <div class="light-content content-item">
+                        <span>JavaScript</span>
+                    </div>
+
+                    <div class="light-content content-item">
+                        <span>PHP</span>
+                    </div>
+
+                    <div class="light-content content-item">
+                        <span>Laravel</span>
+                    </div>
+
+                    <div class="light-content content-item">
+                        <span>Wordpress</span>
+                    </div>
+
+                    <div class="light-content content-item">
+                        <span>React</span>
+                    </div>
+
+                    <div class="light-content content-item">
+                        <span>NextJS</span>
+                    </div>
+
+                    <div class="light-content content-item">
+                        <span>MySql</span>
+                    </div>
+
+                    <div class="light-content content-item">
+                        <span>MongoDB</span>
+                    </div>
+
+                    <div class="light-content content-item">
+                        <span>Gatsby</span>
+                    </div>
+
+                    <div class="light-content content-item">
+                        <span>Jekyll</span>
+                    </div>
+
+                    <div class="light-content content-item">
+                        <span>GhostCMS</span>
+                    </div>
+
+                    <div class="light-content content-item">
+                        <span>Python</span>
+                    </div>
+
+                    <div class="light-content content-item">
+                        <span>Django</span>
+                    </div>
+
+                    <div class="light-content content-item">
+                        <span>Photoshop</span>
+                    </div>
+
+
+                </div>
+            </div>
+
+
+        </section>
+
+        
+
+        <section class="section projects" id="projects">
+            <div class="grid-container">
+                <div class="content header-and-content">
+                    <div class="content-header">
+                        <h2 class="title">My Projects</h2>
+                        <p>Here are some projects, I've worked on.</p>
+                    </div>
+                    <div class="content-background">
+                        
+                        <div class="project" id="aeonfree">
+
+                            <div class="project-image">
+
+                                <div class="website-layout">
+
+                                    <div class="website-header">
+                                        <div class="dots">
+                                            <div class="dot"></div>
+                                            <div class="dot"></div>
+                                            <div class="dot"></div>
+                                        </div>
+
+                                        <div class="url-bar">
+                                            <svg class="lock-icon"><use xlink:href="#lock-icon"></use></svg>
+                                            <span><a target="_blank" href="https://aeonfree.com">aeonfree.com</a></span>
+                                        </div>
+                                    </div>
+    
+                                    <div class="website-body">
+                                        <div class="project-image-holder">
+                                            <img src="./assets/images/full/aeonfree.webp" alt="Aeonfree" />
+                                        </div>
+                                    </div>
+    
+                                </div>
+
+                            </div>
+                            
+
+                            <div class="project-content">
+
+                                <h3 class="project-title">
+                                    <a class="highlight-color-two" target="_blank" href="https://aeonfree.com"><span>Aeonfree</span> <svg class="icon"><use xlink:href="#arrow-external-link"></use></svg> </a>
+                                    <span class="created-date">(2017 - now)</span>
+                                </h3>
+                                
+                                <div class="project-description">
+                                    <p>
+                                        Aeonfree.com is my personal project. I created it to help people host their PHP or static websites for free in the internet.
+                                    </p>
+
+                                    <ul>
+                                        <li>It has more than <span class="highlight-1">100,000</span> registered users and hosts <span class="highlight-1">80,000</span> websites.</li>
+                                        <li>It has a custom built dashboard for users to manage their websites.</li>
+                                        <li>It is built using <span class="highlight-1">Jekyll</span> (Homepage) and <span class="highlight-1">Laravel</span> (Dashboard).</li>
+                                    </ul>
+
+                                </div>
+
+                                <div class="view">
+                                    <a target="_blank" href="https://aeonfree.com" class="btn btn-rounded">View Project <svg class="icon"><use xlink:href="#arrow-external-link"></use></svg> </a>
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                        <div class="project" id="trade99">
+
+                            <div class="project-image">
+
+                                <div class="website-layout">
+
+                                    <div class="website-header">
+                                        <div class="dots">
+                                            <div class="dot"></div>
+                                            <div class="dot"></div>
+                                            <div class="dot"></div>
+                                        </div>
+
+                                        
+
+                                    </div>
+    
+                                    <div class="website-body">
+                                        <div class="project-image-holder">
+                                            <img src="./assets/images/full/trade99.webp" alt="Trade 99" />
+                                        </div>
+                                    </div>
+    
+                                </div>
+
+                            </div>
+                            
+
+                            <div class="project-content">
+
+                                <h3 class="project-title highlight-color-two"><span>Trade99</span> <span class="created-date">(2019)</span></h3>
+                                
+                                <div class="project-description">
+                                    <p>
+                                        One of the first UI Design project I worked on. It was a project for a client who wanted to create a trading learning platform with modern UI, quite similar to Udemy but for only trading videos.
+                                    </p>
+
+                                    <ul>
+                                        <li>I created the UI design in <span class="highlight-1">Photoshop</span>.</li>
+                                        <li>The client wanted a clean designed homepage which showcased his popular courses and a section with an introduction video to the website. This was the UI design I came up with.</li>
+                                        <li>The client was pleased with my design and It was my first success in <span class="highlight-1">UI Design</span>.</li>
+                                    </ul>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                        <div class="project" id="remote-work">
+
+                            <div class="project-image">
+
+                                <div class="website-layout">
+
+                                    <div class="website-header">
+                                        <div class="dots">
+                                            <div class="dot"></div>
+                                            <div class="dot"></div>
+                                            <div class="dot"></div>
+                                        </div>
+
+                                        <div class="url-bar">
+                                            <svg class="lock-icon"><use xlink:href="#lock-icon"></use></svg>
+                                            <span><a rel="nofollow" target="_blank" href="https://www.remote-work.io/course-mastering-remote-work/">remote-work.io</a></span>
+                                        </div>
+
+                                    </div>
+    
+                                    <div class="website-body">
+                                        <div class="project-image-holder">
+                                            <img src="./assets/images/full/remote-work.webp" alt="Remote Work" />
+                                        </div>
+                                    </div>
+    
+                                </div>
+
+                            </div>
+                            
+
+                            <div class="project-content">
+
+                                <h3 class="project-title highlight-color-two">
+                                    <a class="highlight-color-two" target="_blank" href="https://www.remote-work.io/course-mastering-remote-work/"><span>Remote Work</span> <svg class="icon"><use xlink:href="#arrow-external-link"></use></svg> </a>
+                                    <span class="created-date">(2023)</span>
+                                </h3>
+                                
+                                <div class="project-description">
+                                    <p>
+                                        I created this landing for my client at Upwork. He wanted a landing page for his new product which was a Remote Work Course. 
+                                    </p>
+
+                                    <ul>
+                                        <li>I created the UI design in <span class="highlight-1">Photoshop</span> and developed the site in <span class="highlight-1">HTML</span>, <span class="highlight-1">CSS</span>, and <span class="highlight-1">Javascript</span>.</li>
+                                        <li>The original site of the client was a blog and the site used <span class="highlight-1">GhostCMS</span>. I worked with the implementation and maintainence of the site.</li>
+                                    </ul>
+
+                                    <div class="view">
+                                        <a target="_blank" rel="nofollow" href="https://www.remote-work.io/course-mastering-remote-work/" class="btn btn-rounded">View Project <svg class="icon"><use xlink:href="#arrow-external-link"></use></svg> </a>
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                        <div class="project" id="animelikelist">
+
+                            <div class="project-image">
+
+                                <div class="website-layout">
+
+                                    <div class="website-header">
+                                        <div class="dots">
+                                            <div class="dot"></div>
+                                            <div class="dot"></div>
+                                            <div class="dot"></div>
+                                        </div>
+
+                                        <div class="url-bar">
+                                            <svg class="lock-icon"><use xlink:href="#lock-icon"></use></svg>
+                                            <span><a target="_blank" href="https://animelikelist.com">animelikelist.com</a></span>
+                                        </div>
+                                    </div>
+    
+                                    <div class="website-body">
+                                        <div class="project-image-holder">
+                                            <img src="./assets/images/full/animelikelist.webp" alt="Aeonfree" />
+                                        </div>
+                                    </div>
+    
+                                </div>
+
+                            </div>
+                            
+
+                            <div class="project-content">
+
+                                <h3 class="project-title">
+                                    <a class="highlight-color-two" target="_blank" href="https://animelikelist.com"><span>AnimeLikeList</span> <svg class="icon"><use xlink:href="#arrow-external-link"></use></svg> </a>
+                                    <span class="created-date">(2023 - now)</span>
+                                </h3>
+                                
+                                <div class="project-description">
+                                    <p>
+                                        AnimeLikeList.com is one of my personal project. I created it to help people find Anime Recommendations and share their views on what they have watched.
+                                    </p>
+
+                                    <ul>
+                                        <li>It has more than <span class="highlight-1">1000</span> registered users.</li>
+                                        <li>Anyone can get random or customized anime recommendations.</li>
+                                        <li>Users can create a new account and save their favourite anime, as well as share their opinion.</li>
+                                        <li>Users can create their own anime ranking list.</li>
+                                        <li>It is built using <span class="highlight-1">Laravel</span>.</li>
+                                    </ul>
+
+                                </div>
+
+                                <div class="view">
+                                    <a target="_blank" href="https://animelikelist.com" class="btn btn-rounded">View Project <svg class="icon"><use xlink:href="#arrow-external-link"></use></svg> </a>
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section about" id="contact">
+            <div class="grid-container">
+                <div class="content two-row for-contact">
+                    <div class="content-header">
+                        <h2 class="title">Contact Me</h2>
+                    </div>
+                    <div class="content-background">
+
+                        <div class="background-section form-holder">
+                            <div class="background-section-intro"><h3>Send me a message</h3></div>
+                            
+                            <div class="contact-form-holder">
+                                <form name="contact-form" method="post" class="contact-form" netlify>
+
+                                    <div class="form-area">
+                                        <label for="Name">Name</label>
+                                        <input class="input-text" type="text" placeholder="Your name" name="Name">
+                                    </div>
+
+                                    <div class="form-area">
+                                        <label for="Email">Email</label>
+                                        <input class="input-text" type="email" placeholder="Your email" name="Email">
+                                    </div>
+
+                                    <div class="form-area">
+                                        <label for="Message">Message</label>
+                                        <textarea class="message" placeholder="Message" name="Message"></textarea>
+                                    </div>
+                                    
+                                    <div class="form-area">
+                                        <button class="btn btn-lg btn-rounded submit-button" type="submit">Send Message</button>
+                                    </div>
+
+                                </form>
+                            </div>
+
+                        </div>
+
+                        <div class="background-section social">
+                            <div class="background-section-intro"><h3>Social Links</h3></div>
+                            <div class="social-links">
+
+                                <ul>
+                                   <li>
+                                        <a class="btn btn-rounded" target="_blank" href="https://linkedin.com/in/sameerkhanal209">
+                                            <svg class="linkedin"><use xlink:href="#linkedin"></use></svg>
+                                        </a>
+                                   </li>
+                                    <li>
+                                        <a class="btn btn-rounded" target="_blank" href="https://twitter.com/sameerkhanal209">
+                                            <svg class="brand-x"><use xlink:href="#brand-x"></use></svg>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a class="btn btn-rounded" target="_blank" href="https://github.com/sameerkhanal209">
+                                            <svg class="github"><use xlink:href="#github"></use></svg>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a class="btn btn-rounded" target="_blank" href="https://instagram.com/sameerkhanal209">
+                                            <svg class="instagram"><use xlink:href="#instagram"></use></svg>
+                                        </a>
+                                    </li>
+                                </ul>
+
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+
+      </main>
+
+      <footer>
+        <div class="container">
+            Copyright &copy; <span id="year"></span>. Designed and developed by Sameer Khanal.
+        </div>
+      </footer>
+    </div>
+
+    <div class="scroll-to-top">
+        <button class="scroll-holder">
+            <span class="default">Scroll to top</span>
+            <span class="back switch-text" aria-hidden="true">スクロールします</span>
+            <svg class="arrow-right"><use xlink:href="#arrow-right"></use></svg>
+        </button>
+    </div>
+
+    <script src="assets/scripts/script.js"></script>
+  </body>
+</html>

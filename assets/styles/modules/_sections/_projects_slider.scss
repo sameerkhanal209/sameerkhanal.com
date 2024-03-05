@@ -1,0 +1,71 @@
+.projects_slider{
+
+    --gap: 1rem;
+    position: relative;
+    display: flex;
+    overflow: hidden;
+    user-select: none;
+    gap: var(--gap);
+
+    
+    border-top: 1px solid var(--grid-color);
+    border-bottom: 1px solid var(--grid-color);
+
+    .projects-holder{
+        flex-shrink: 0;
+        display: flex;
+        justify-content: space-around;
+        gap: var(--gap);
+        min-width: 100%;
+
+        animation: scroll 30s linear infinite;
+
+        .project{
+            height: 500px;
+            width: 350px;
+            border-right: 1px solid var(--grid-color);
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+
+            @media screen and (max-width: $md-screen){
+              height: 300px;
+              width: 210px;
+
+              animation: scroll 40s linear infinite;
+            }
+
+            img{
+              object-fit: cover;
+              width: 100%;
+            }
+
+
+        }
+    }
+
+    &:hover{
+        .projects-holder{
+            animation-play-state: paused;
+        }
+    }
+}
+
+
+@keyframes scroll {
+    from {
+      transform: translateX(0);
+    }
+    to {
+      transform: translateX(calc(-100% - var(--gap)));
+    }
+  }
+  
+  /* Pause animation when reduced-motion is set */
+  @media (prefers-reduced-motion: reduce) {
+    .marquee__content {
+      animation-play-state: paused !important;
+    }
+  }

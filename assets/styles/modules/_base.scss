@@ -1,0 +1,119 @@
+@import url('https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@100..900&display=swap');
+
+$sm-screen: 440px;
+$md-screen: 768px;
+$lg-screen: 1024px;
+$xl-screen: 1200px;
+
+:root{
+
+    /* Fonts */
+    --font-family: 'Lexend Deca', sans-serif;
+    
+    /* Colors */
+    --color-bg: #000;
+
+    --color-primary: #fff;
+    --color-secondary: #333;
+    --color-tertiary: #0a0a0a;
+
+    --color-font-primary: #000;
+    --color-font-secondary: #C0BEBE;
+    --muted-color: #a1a1a1;
+
+    --color-green: #083a33;
+    --color-dark-green: #0ac7b4;
+
+
+    --grid-color: #1f1f1f;
+
+    /* Sizing */
+    --container-max-width: 1400px;
+
+    --header-font-size: .9rem;
+
+    --section-margin: 60px;
+    --section-inner-padding: 60px;
+
+    --body-font: 1.4rem;
+
+    @media screen and (max-width: $md-screen){
+       --body-font: 1.1rem;
+       --section-margin: 40px;
+       --section-inner-padding: 40px;
+    }
+
+    @media screen and (max-width: $sm-screen){
+        --body-font: 1rem;
+        --section-margin: 20px;
+        --section-inner-padding: 20px;
+    }
+
+
+    /* Screens */
+
+}
+
+*{
+    font-family: var(--font-family);
+}
+
+html{
+    scroll-behavior: smooth;
+    scroll-padding: 20px;
+}
+
+body{
+    font-family: var(--font-family);
+    background-color: var(--color-bg);
+    color: var(--color-font-secondary);
+    cursor: default;
+    
+    &.no-scroll {
+        height: 100%;
+        overflow: hidden;
+
+        @media screen and (min-width: $md-screen){
+            height: auto;
+            overflow: auto;
+        }
+    }
+}
+
+.container{
+    max-width: var(--container-max-width);
+    width: 100%;
+    margin: 10px auto;
+}
+
+.main{
+    overflow: hidden;
+    min-height: 100vh;
+}
+
+.controllable-gradient {
+
+    position: fixed;
+    pointer-events: none;
+  
+    top: 0px;
+    left: 0px;
+  
+    background: linear-gradient(180deg, #ff3358, #ff4fd8);
+  
+    mix-blend-mode: normal;
+    opacity: var(--opacity);
+    filter: blur(150px);
+  
+    height: 150px;
+    width: 150px;
+  
+    //transform: translate3d(-50%, -50%, 0);
+  
+    border-radius: 50%;
+
+    @media screen and (max-width: $md-screen){
+        display: none;
+    }
+    
+  }

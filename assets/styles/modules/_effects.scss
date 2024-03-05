@@ -1,0 +1,78 @@
+/* Window's calendar effect */
+.light-mouse {
+    position: absolute;
+    width: 15rem;
+    height: 15rem;
+    z-index: 4;
+    border-radius: 50%;
+    transform: translate3d(-50%, -50%, 0);
+}
+
+.light-content {
+    user-select: none;  
+    position: relative;
+    z-index: 9;
+    cursor: pointer;
+  
+    &:focus {
+      outline: none;
+    }
+
+    &:after {
+      transition: all .4s;
+      content: '';
+      position: absolute;
+      z-index: -1;
+    }
+}
+
+
+@mixin theme(
+  $fg: #eee, 
+  $bg: #000, 
+  $highlight: $fg, 
+  $bw: 2px, 
+  $hoverBg: darken($bg, 5%),
+  $lightColor: $fg
+) {
+  background-color: $bg;
+  color: $fg;
+  
+  .mask {
+    background: $bg;
+  }
+
+  .light-mouse {
+    background: radial-gradient(ellipse at center, rgba($lightColor, .5) 0%, rgba($lightColor ,0) 50%);
+  }
+  .light-content {
+    border: 2px solid $bg;
+    &:after {
+      background-color: $bg;
+      top: $bw;
+      bottom: $bw;
+      right: $bw;
+      left: $bw;
+    }
+
+    &:not(.oom) {
+        &:hover {
+            //background-color: $highlight;
+          &:after {
+            // background-color: $hoverBg
+          }
+        }
+      }
+
+  }
+  .themes {
+    background-color: $bg;
+  }
+}
+
+.light-effect {
+  @include theme(#eee, #000, #eee, 2px, lighten(#000, 10%));
+  & & {
+    border-color: #fff;
+  }
+}
