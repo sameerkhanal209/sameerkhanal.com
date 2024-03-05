@@ -133,7 +133,7 @@ body.no-scroll {
   left: 0px;
   background: linear-gradient(180deg, #ff3358, #ff4fd8);
   mix-blend-mode: normal;
-  filter: blur(150px);
+  filter: blur(100px);
   height: 150px;
   width: 150px;
   border-radius: 50%;
