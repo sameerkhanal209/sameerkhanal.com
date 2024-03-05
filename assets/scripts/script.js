@@ -2,9 +2,23 @@ document.addEventListener('DOMContentLoaded', function() {
 
     /* Hamburger Menu */
 
+    let everyLinkEventCreated = false;
     document.querySelector('.hamburger').addEventListener('click', ()=>{
         document.querySelector('.menu').classList.toggle('active')
         document.querySelector('body').classList.toggle('no-scroll')
+
+        if(!everyLinkEventCreated){
+
+            document.querySelectorAll('.menu a').forEach(link=>{
+                link.addEventListener('click', ()=>{
+                    document.querySelector('.menu').classList.remove('active')
+                    document.querySelector('body').classList.remove('no-scroll')
+                })
+            })
+
+            everyLinkEventCreated = true;
+        }
+
     })
 
     /* Mouse Background Gradient */
