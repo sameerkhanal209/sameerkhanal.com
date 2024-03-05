@@ -22,6 +22,11 @@ footer{
     transition: opacity .5s ease-in-out;
     opacity: 0;
 
+    @media screen and (max-width: $md-screen){
+        right: -70px;
+        bottom: -14px;
+    }
+
 
     &.show{
         opacity: 1;
