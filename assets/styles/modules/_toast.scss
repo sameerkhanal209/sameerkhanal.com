@@ -1,0 +1,43 @@
+.toast {
+  position: fixed;
+
+  width: 300px;
+  left: 50%;
+  bottom: 30px;
+  padding: 10px 30px;
+
+  pointer-events: none;
+  background-color: var(--color-bg);
+  font-size: 1.2rem;
+  line-height: 1.4;
+  border: 1px solid var(--grid-color);
+  z-index: 88;
+
+  text-align: center;
+
+  transform: translateX(-50%);
+
+  animation: fadeinBottom 0.5s, fadeoutBottom 0.5s 2.5s;
+}
+
+@keyframes fadeinBottom {
+  from {
+    bottom: 0;
+    opacity: 0;
+  }
+  to {
+    bottom: 30px;
+    opacity: 1;
+  }
+}
+
+@keyframes fadeoutBottom {
+  from {
+    bottom: 30px;
+    opacity: 1;
+  }
+  to {
+    bottom: 0;
+    opacity: 0;
+  }
+}

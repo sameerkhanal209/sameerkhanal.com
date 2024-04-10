@@ -9,6 +9,10 @@
         margin: var(--section-margin) 5px;
     }
 
+    &.hidden{
+        display: none;
+    }
+
     .grid-container{
         max-width: 1200px;
         width: 100%;
@@ -22,14 +26,15 @@
         padding: var(--section-inner-padding);
         position: relative;
 
-        &:before{
+        &::before{
             content: "+";
             position: absolute;
             top: -29px;
             left: -15px;
             font-size: 3rem;
             font-weight: 100;
-            transition: transform 0.3s ease-in-out;
+            transition: transform 0.3s ease-in-out, left 1s ease-in-out, top 1s ease-in-out;
+            //animation: moveAround1 4s linear infinite;
         }
 
         &::after{
@@ -39,8 +44,19 @@
             right: -15px;
             font-size: 3rem;
             font-weight: 100;
-            transition: transform 0.3s ease-in-out;
+            transition: transform 0.3s ease-in-out, right 1s ease-in-out, bottom 1s ease-in-out;
+            //animation: moveAround2 4s linear infinite;
         }
+
+        // &:hover{
+        //     &::before{
+        //         left: calc(100% - 15px);
+        //     }
+        //     &::after{
+        //         right: calc(100% - 15px);
+        //     }
+        // }
+
     }
 
     .two-row{
@@ -291,8 +307,35 @@
     margin-bottom: 0;
 }
 
+.description-holder{
+    position: fixed;
+    pointer-events: none;
+    
+    background-color: var(--color-bg);
+    font-size: .9rem;
+    line-height: 1.4;
+    border: 1px solid var(--grid-color);
+    padding: 20px;
+    width: 300px;
+    z-index: 88;
+    visibility: hidden;
+
+    transition: height 1s ease-in-out, width 1s ease-in-out;
+    
+    display: none;
+
+    @media (hover: hover) {
+        display: block;
+    }
+
+}
+
 .skills{
     margin-top: 20px;
+
+    .description{
+        display: none;
+    }
 }
 
 .for-contact{
@@ -401,3 +444,52 @@
     }
 
 }
+
+
+/* ANimation */
+
+// @keyframes moveAround1 {
+//     0% {
+//       top: -29px;
+//       left: -15px;
+//     }
+//     25% {
+//         top: -29px;
+//         left: calc(100% - 15px);
+//     }
+//     50% {
+//         top: calc(100% - 29px);
+//         left: calc(100% - 15px);
+//     }
+//     75% {
+//         top: calc(100% - 29px);
+//         left: -15px;
+//     }
+//     100% {
+//         top: -29px;
+//         left: -15px;
+//     }
+// }
+
+// @keyframes moveAround2 {
+//     0% {
+//         bottom: -20px;
+//         right: -15px;
+//     }
+//     25% {
+//         bottom: -20px;
+//         right: calc(100% - 15px);
+//     }
+//     50% {
+//         bottom: calc(100% - 20px);
+//         right: calc(100% - 15px);
+//     }
+//     75% {
+//         bottom: calc(100% - 20px);
+//         right: -15px;
+//     }
+//     100% {
+//         bottom: -20px;
+//         right: -15px;
+//     }
+// }
