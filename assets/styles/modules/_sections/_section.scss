@@ -1,3 +1,4 @@
+
 .section{
     margin: var(--section-margin) 0;
 
@@ -19,6 +20,11 @@
         margin:0 auto;
         
         position: relative;
+        overflow: hidden;
+
+        &::before{
+
+        }
     }
 
     .content{
