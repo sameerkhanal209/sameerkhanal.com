@@ -167,6 +167,53 @@ document.addEventListener('DOMContentLoaded', function() {
         })
     }
 
+    // Text Animation
+
+    function StartAnimatingText(){
+        const grabTextElements = document.querySelectorAll('.animated-text');
+        
+        grabTextElements.forEach(textElement=>{
+            const text = textElement.textContent.trim().replace('-', '‑').replace(/&#8232;/g, ' ');
+            const textArray = text.split(' ');
+            
+            // Clear original text
+            textElement.textContent = '';
+
+            textArray.forEach((word, index) => {
+                const spanWord = document.createElement('span');
+                spanWord.className = 'word';
+                
+                const spanInnerWord = document.createElement('span');
+                spanInnerWord.className = 'inner-word';
+                spanInnerWord.textContent = index === textArray.length - 1 ? word : word + ' ';
+                
+                spanWord.appendChild(spanInnerWord);
+                textElement.appendChild(spanWord);
+            });
+
+            const innerWords = document.querySelectorAll('.inner-word');
+
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    innerWords.forEach((word, index) => {
+                    setTimeout(() => {
+                        word.classList.add('animate');
+                    }, index * 75); // 75ms stagger
+                    });
+                    observer.disconnect(); // Stop observing once animation starts
+                }
+                });
+            }, {
+                threshold: 0.1 // Adjust this value based on when you want the animation to trigger
+            });
+
+            observer.observe(textElement);
+        })
+    }
+
+    StartAnimatingText()
+
     //Footer
 
     document.getElementById("year").innerHTML = new Date().getFullYear();

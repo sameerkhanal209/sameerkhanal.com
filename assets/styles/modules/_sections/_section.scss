@@ -1,3 +1,103 @@
+@keyframes gradient-move-to-right {
+    0% {
+      left: 0;
+      opacity: 100%;
+    }
+    80% {
+      left: calc(100% - 80px);
+      opacity: 100%;
+    }
+    100% {
+      left: calc(100% - 80px);
+      opacity: 0;
+    }
+}
+
+@keyframes gradient-move-to-left {
+    0% {
+      right: 0;
+      opacity: 100%;
+    }
+    80% {
+      right: calc(100% - 80px);
+      opacity: 100%;
+    }
+    100% {
+      right: calc(100% - 80px);
+      opacity: 0;
+    }
+
+}
+
+@keyframes gradient-move-to-bottom {
+    0% {
+      top: 0;
+      opacity: 100%;
+    }
+    80%{
+        top: calc(100% - 80px);
+        opacity: 100%;
+    }
+    100% {
+      top: calc(100% - 80px);
+      opacity: 0;
+    }
+}
+
+@keyframes gradient-move-to-top {
+    0% {
+      bottom: 0;
+      opacity: 100%;
+    }
+    80%{
+        bottom: calc(100% - 80px);
+        opacity: 100%;
+    }
+    100% {
+      bottom: calc(100% - 80px);
+        opacity: 0;
+    }
+}
+
+@mixin line {
+
+    .line{
+        background: linear-gradient(to right, transparent, rgba(255, 255, 255, 0.7));
+        position: absolute;
+        top: 0;
+        left: 0px;
+        width: 80px;
+        height: 1px;
+        z-index: 1;
+        //animation: gradient-move-to-right 5s linear infinite;
+        animation-duration: 5s;
+        animation-timing-function: linear;
+        animation-iteration-count: infinite;
+        animation-name: gradient-move-to-right;
+
+        animation-play-state: running;
+
+        animation-play-state: paused;
+
+        display: none;
+
+        &:nth-child(odd){
+            background: linear-gradient(to left, transparent, rgba(255, 255, 255, 0.7));
+            top: auto;
+            bottom: 0;
+            right: 0px;
+            left: auto;
+            animation-name: gradient-move-to-left;
+        }
+    }
+
+    &:hover{
+        .line{
+            animation-play-state: running;
+            display: block;
+        }
+    }
+  }
 
 .section{
     margin: var(--section-margin) 0;
@@ -20,11 +120,6 @@
         margin:0 auto;
         
         position: relative;
-        overflow: hidden;
-
-        &::before{
-
-        }
     }
 
     .content{
@@ -450,6 +545,98 @@
     }
 
 }
+
+.show-line{
+    position: relative;
+
+    @include line;
+}
+
+.glow-line{
+    position: relative;
+    &::before{
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 80px;
+        height: 1px;
+        background: linear-gradient(to right, transparent, rgba(255, 255, 255, 0.7));
+        z-index: 1;
+        animation: gradient-move-to-right 5s linear infinite;
+    }
+}
+
+.glow-line-horizontal{
+
+    &::before{
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 1px;
+        height: 80px;
+        background: linear-gradient(transparent, rgba(255, 255, 255, 0.7));
+        z-index: 1;
+        animation: gradient-move-to-bottom 5s linear infinite;
+    }
+
+    &:nth-child(even){
+        &::before{
+            left: 100%;
+            bottom: 0;
+            top: auto;
+            background: linear-gradient(to top, transparent, rgba(255, 255, 255, 0.7));
+            animation: gradient-move-to-top 5s linear infinite;
+        }
+    }
+
+    &.center{
+        &::before{
+            left: 50%;
+            transform: translateX(-50%);
+            animation-duration: 30s;
+        }
+    }
+
+}
+
+/* Animations */
+
+.word {
+    display: inline-block;
+    overflow: hidden;
+    margin-right: 0.3em;
+}
+
+.inner-word {
+    display: inline-block;
+    transform: translateY(150%) rotate(10deg);
+    transition: transform 1.125s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+.inner-word.animate {
+    transform: translateY(0) rotate(0);
+}
+
+.fade-in-up{
+    animation: fade-in-up 1s ease-out forwards;
+    opacity: 0;
+    transform: translateY(2rem);
+}
+
+@keyframes fade-in-up {
+    0% {
+        opacity: 0;
+        transform: translateY(2rem)
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0)
+    }
+}
+  
 
 
 /* ANimation */
