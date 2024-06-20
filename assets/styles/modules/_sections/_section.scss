@@ -1,7 +1,11 @@
 @keyframes gradient-move-to-right {
     0% {
-      left: 0;
-      opacity: 100%;
+      left: 0%;
+      opacity: 0%;
+    }
+    20%{
+        left: 20%;
+        opacity: 100%;
     }
     80% {
       left: calc(100% - 80px);
@@ -16,7 +20,11 @@
 @keyframes gradient-move-to-left {
     0% {
       right: 0;
-      opacity: 100%;
+      opacity: 0%;
+    }
+    20%{
+        right: 20%;
+        opacity: 100%;
     }
     80% {
       right: calc(100% - 80px);
@@ -32,7 +40,11 @@
 @keyframes gradient-move-to-bottom {
     0% {
       top: 0;
-      opacity: 100%;
+      opacity: 0;
+    }
+    20%{
+        top: 20%;
+        opacity: 100%;
     }
     80%{
         top: calc(100% - 80px);
@@ -47,7 +59,11 @@
 @keyframes gradient-move-to-top {
     0% {
       bottom: 0;
-      opacity: 100%;
+      opacity: 0;
+    }
+    20%{
+        bottom: 20%;
+        opacity: 100%;
     }
     80%{
         bottom: calc(100% - 80px);

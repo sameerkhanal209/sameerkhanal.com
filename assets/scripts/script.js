@@ -173,7 +173,6 @@ document.addEventListener('DOMContentLoaded', function() {
 
     if(document.querySelector('.with-multiple-image')){
         let multipleImageProjects = document.querySelectorAll('.with-multiple-image');
-        
 
         multipleImageProjects.forEach(project=>{
 
