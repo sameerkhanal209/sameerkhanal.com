@@ -176,6 +176,8 @@ document.addEventListener('DOMContentLoaded', function() {
 
         multipleImageProjects.forEach(project=>{
 
+            let switchImageHolder = project.querySelector('.switch-image.glow-line')
+
             let images = project.querySelectorAll('.image-holder');
             let currentImage = 0;
 
@@ -194,6 +196,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
             function updateImage(direction){
+
                 images[currentImage].classList.remove('active')
                 
                 if(direction === "left"){
@@ -202,6 +205,7 @@ document.addEventListener('DOMContentLoaded', function() {
                     currentImage = (currentImage + 1) % images.length;
                 }
                 
+
                 images[currentImage].classList.add('active')
 
                 updateIndicator()
@@ -215,8 +219,17 @@ document.addEventListener('DOMContentLoaded', function() {
                 updateImage("left")
             })
 
+            // switchImageHolder.addEventListener('animationend', ()=>{
+            //     updateImage("right")
+            // })
+
+            switchImageHolder.addEventListener('animationend', ()=>{
+                console.log("Animation Ended")
+            })
+
             setInterval(()=>{
                 updateImage("right")
+                switchImageHolder.classList.add('active');
             }, 5000)
 
         })

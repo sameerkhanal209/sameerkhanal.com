@@ -212,6 +212,7 @@
 
             img{
                 display: none;
+                transition: opacity 0.3s ease-in-out;
 
                 &.active{
                     display: block;
@@ -390,6 +391,16 @@
                 transform: translateY(-5px);
             }
         }
+    }
+}
+
+.switch-image.glow-line{
+    &::before{
+        animation-play-state: paused;
+    }
+
+    &.active::before{
+        animation-play-state: running;
     }
 }
 
