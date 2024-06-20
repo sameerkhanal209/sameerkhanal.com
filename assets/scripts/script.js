@@ -167,6 +167,101 @@ document.addEventListener('DOMContentLoaded', function() {
         })
     }
 
+
+    // If the project has multiple images
+
+
+    if(document.querySelector('.with-multiple-image')){
+        let multipleImageProjects = document.querySelectorAll('.with-multiple-image');
+        
+
+        multipleImageProjects.forEach(project=>{
+
+            let images = project.querySelectorAll('.image-holder');
+            let currentImage = 0;
+
+            images.forEach((image, index)=>{
+                if(index === currentImage){
+                    image.classList.add('active')
+                } else {
+                    image.classList.remove('active')
+                }
+            })
+
+            function updateIndicator(){
+                project.querySelector('.indicator').innerText = `${currentImage + 1} / ${images.length}`
+            }
+            updateIndicator();
+
+
+            function updateImage(direction){
+                images[currentImage].classList.remove('active')
+                
+                if(direction === "left"){
+                    currentImage = (currentImage - 1 + images.length) % images.length;
+                } else {
+                    currentImage = (currentImage + 1) % images.length;
+                }
+                
+                images[currentImage].classList.add('active')
+
+                updateIndicator()
+            }
+
+            project.querySelector('.next-image').addEventListener('click', ()=>{
+                updateImage("right")
+            })
+
+            project.querySelector('.prev-image').addEventListener('click', ()=>{
+                updateImage("left")
+            })
+
+            setInterval(()=>{
+                updateImage("right")
+            }, 5000)
+
+        })
+    }
+
+    // Show More Projects button
+
+
+    function InitiateShowMoreProjects(){
+
+        const showMoreBtn = document.querySelector(".see-more-projects-btn");
+        const hiddenContent = document.querySelector(".more-projects");
+
+        showMoreBtn.addEventListener("click", () => {
+            if (hiddenContent.classList.contains("hidden")) {
+
+                hiddenContent.classList.replace("hidden", "show");
+                
+                const height = hiddenContent.scrollHeight + "px";
+                hiddenContent.style.maxHeight = height;
+
+                hiddenContent.addEventListener('transitionend', () => {
+                    showMoreBtn.querySelector('.show-less').style.display = "block";
+                    showMoreBtn.querySelector('.show-more').style.display = "none";
+                }, { once: true });
+
+            } else {
+                hiddenContent.style.maxHeight = 0;
+
+                hiddenContent.addEventListener('transitionend', () => {
+                    hiddenContent.classList.replace("show", "hidden");
+
+                    showMoreBtn.querySelector('.show-less').style.display = "none";
+                    showMoreBtn.querySelector('.show-more').style.display = "block";
+
+                }, { once: true });
+                
+            }
+        });
+
+    }
+
+    InitiateShowMoreProjects()
+
     // Text Animation
 
     function StartAnimatingText(){
@@ -213,6 +308,7 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     StartAnimatingText()
+
 
     //Footer
 
