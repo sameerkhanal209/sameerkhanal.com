@@ -483,6 +483,7 @@
             padding: 0;
 
             display: flex;
+            flex-wrap: wrap;
 
             li{
                 list-style: none;
@@ -494,6 +495,13 @@
                         width: 22px !important;
                         
                         transform: none !important;
+                    }
+
+                    font-size: 1rem;
+                    color: var(--muted-color) !important;
+
+                    span{
+                        margin-left: 10px;
                     }
                 }
 

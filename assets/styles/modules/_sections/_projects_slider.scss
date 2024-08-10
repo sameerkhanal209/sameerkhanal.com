@@ -61,7 +61,7 @@
     to {
       transform: translateX(calc(-100% - var(--gap)));
     }
-  }
+}
   
   /* Pause animation when reduced-motion is set */
   @media (prefers-reduced-motion: reduce) {
