@@ -473,9 +473,14 @@
 
     .social{
         padding: 40px var(--section-inner-padding) !important;
+
+        @media screen and (max-width: $md-screen){
+            text-align: center;
+        }
     }
 
     .social-links{
+
         
         ul{
             
@@ -484,6 +489,12 @@
 
             display: flex;
             flex-wrap: wrap;
+
+            @media screen and (max-width: $md-screen){
+                justify-content: center;
+                align-items: center;
+                text-align: center;
+            }
 
             li{
                 list-style: none;
@@ -512,6 +523,8 @@
                 }
             }
         }
+
+        
     }
 
     .contact-form-holder{

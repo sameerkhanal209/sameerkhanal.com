@@ -576,7 +576,7 @@ body.no-scroll {
   background-size: 100% 100%, 100% 100%, 1440px 1px;
   background-position: bottom;
   background-repeat: no-repeat;
-  background: linear-gradient(to top, black 0, hsla(0, 0%, 100%, 0) 100%), linear-gradient(90deg, rgba(235, 54, 127, 0.2) 0, rgba(121, 40, 202, 0.2) 100%);
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.8) 0, hsla(0, 0%, 100%, 0) 100%), linear-gradient(90deg, rgba(64, 169, 255, 0.15) 0, rgba(138, 43, 226, 0.15) 50%, rgba(255, 105, 180, 0.15) 100%);
 }
 .section .six-row-with-heading .content-item:hover span {
   background: linear-gradient(307deg, #d4b7e8, #d1b7ef 50.57%, #ff849a);
@@ -879,7 +879,7 @@ body.no-scroll {
 @media screen and (max-width: 768px) {
   .hero .content .title {
     font-size: 2.7rem;
-    line-height: 1.5;
+    line-height: 1;
   }
 }
 @media screen and (max-width: 440px) {

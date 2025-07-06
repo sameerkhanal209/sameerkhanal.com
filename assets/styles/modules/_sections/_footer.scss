@@ -1,9 +1,38 @@
 footer{
-    margin-top: var(--section-margin);
-    border-top: 1px solid var(--grid-color);
-    padding: 20px;
+    // margin-top: var(--section-margin);
+    // border-top: 1px solid var(--grid-color);
+    // padding: 20px;
     text-align: center;
-    line-height: 1.5;
+    // line-height: 1.5;
+
+    .content{
+        border: none;
+        padding: 25px !important;
+        line-height: 1.5;
+    }
+
+    .container{
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+}
+
+.signature-container{
+    max-width: 1200px;
+    margin: 0 auto;
+
+    .metallic-signature{
+        width: 100%;
+        height: auto;
+        display: block;
+        margin-bottom: -.5rem;
+        
+        svg {
+            width: 100%;
+            height: auto;
+            fill: url(#metallic-gradient);
+        }
+    }
 }
 
 .scroll-to-top{
